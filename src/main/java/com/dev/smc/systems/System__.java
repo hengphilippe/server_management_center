@@ -2,13 +2,12 @@ package com.dev.smc.systems;
 
 import com.dev.smc.servers.Server;
 import jakarta.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "systems")
-public class System_ {
+public class System__ {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
