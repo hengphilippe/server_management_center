@@ -20,14 +20,14 @@ public class CredentialUtil {
     {
         try {
             Cipher cipher = Cipher.getInstance(ALGORITHM);
+            System.out.println("Chiper : " +  cipher);
             cipher.init(Cipher.ENCRYPT_MODE, key);
             byte[] encryptedData = cipher.doFinal(code.getBytes());
             return Base64.getEncoder().encodeToString(encryptedData);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            System.out.println("Code Encryption Failed");
+            System.out.println("Code Encryption Failed.....");
             throw new RuntimeException(e);
-
         }
     }
 

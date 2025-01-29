@@ -60,13 +60,13 @@ public class Credential {
 
     public String getPassword() {
         System.out.println("Password Process...");
-        return password;
-//        return CredentialUtil.decrypt(password);
+//        return password;
+        return CredentialUtil.decrypt(password);
     }
 
     public void setPassword(String password) {
         System.out.println("Password Process...");
-        this.password = password;
-//        this.password = CredentialUtil.encrypt(password);
+//        this.password = password;
+        this.password = CredentialUtil.encrypt(password);
     }
 }
