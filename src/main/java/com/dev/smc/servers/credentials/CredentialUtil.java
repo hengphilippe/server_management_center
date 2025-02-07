@@ -56,6 +56,7 @@ public class CredentialUtil {
             System.arraycopy(encryptedDataWithIv, 0, iv, 0, iv.length);
             IvParameterSpec ivSpec = new IvParameterSpec(iv);
             byte[] encryptedData = new byte[encryptedDataWithIv.length - iv.length];
+            
             System.arraycopy(encryptedDataWithIv, iv.length, encryptedData, 0, encryptedData.length);
             Cipher cipher = Cipher.getInstance(ALGORITHM);
             cipher.init(Cipher.DECRYPT_MODE, key, ivSpec);
